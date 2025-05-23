@@ -19,3 +19,26 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: "Gapyeong";
+  src: url("https://aifortunedoctor.com/font/Gapyeong/GapyeongHanseokbongR.otf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zen Antique";
+  src: url("https://fonts.gstatic.com/s/zenantique/v13/AYCPpXPnd91Ma_Zf-Ri2JXJp.woff")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-gapyeong {
+  font-family: "Gapyeong", sans-serif;
+  color: #424242;
+}
+.font-zenantique {
+  font-family: "Zen Antique", sans-serif;
+}
