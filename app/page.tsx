@@ -1,4 +1,4 @@
-import ChartList from "../components/ChartList";
+import Chart from "@/components/Chart";
 
 export default function Home() {
   return (
@@ -14,19 +14,7 @@ export default function Home() {
           <p className="font-gapyeong">제가 oo님의 사주를</p>
           <p className="font-gapyeong">보기 쉽게 표로 정리했어요</p>
         </div>
-        <div className="w-full absolute top-[65.6%] p-2">
-          <div className="w-full relative bg-[#F5F3EC] shadow-2xl border-black border-[4px] pb-[20px] flex flex-col items-center">
-            <div className="w-full h-[2px] bg-[#2B557E] top-[6px] absolute"></div>
-            <div className="w-[2px] h-full bg-[#2B557E] right-[6px] absolute"></div>
-            <div className="w-full h-[2px] bg-[#2B557E] bottom-[6px] absolute"></div>
-            <div className="w-[2px] h-full bg-[#2B557E] left-[6px] absolute"></div>
-            <p className="font-gapyeong text-xl mt-8 mb-2">김로켓님의 사주</p>
-            <p className="font-gapyeong text-2xl font-semibold mb-6">
-              1980년 8월27일 08:10
-            </p>
-            <ChartList />
-          </div>
-        </div>
+        <Chart name="김로켓" birthDay="1980년 8월27일 08:10" />
       </div>
     </div>
   );

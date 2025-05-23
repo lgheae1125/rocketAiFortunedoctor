@@ -9,17 +9,19 @@ interface ItemsType {
 interface ChartItemProps {
   items: ItemsType[];
 }
-function ChartItem({ items }: { items: ItemsType[] }) {
+function ChartItem({ items }: ChartItemProps) {
   return (
     <>
       {items.map((item, index) => (
         <div key={index} className="h-full flex items-center">
           {item.imgURL ? (
-            <img src={item.imgURL} alt="chart-img" className="h-full" />
+            <img src={item.imgURL} alt="chartImg" className="h-full" />
           ) : (
-            <div>
-              <p className="font-zenantique">{item.chineseText}</p>
-              <p className="font-gapyeong text-xs">({item.koreanText})</p>
+            <div className="py-[2px]">
+              <p className="font-zenantique text-lg -mb-1">
+                {item.chineseText}
+              </p>
+              <p className="font-gapyeong">({item.koreanText})</p>
             </div>
           )}
         </div>
