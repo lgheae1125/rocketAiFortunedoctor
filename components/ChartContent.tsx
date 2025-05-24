@@ -1,38 +1,107 @@
 import React from "react";
-import ChartItem from "./ChartItem";
+import ChartTitle from "./ChartTitle";
+import ChartContentLine from "./ChartContentLine";
 
-interface ItemsType {
-  chineseText?: string;
-  koreanText?: string;
-  imgURL?: string;
-}
+// 가상 데이터 구조
+const chartContentData = [
+  {
+    contentLine: [
+      [{ chineseText: "十星", koreanText: "십성" }],
+      [{ chineseText: "傷官", koreanText: "상관" }],
+      [{ chineseText: "比肩", koreanText: "비견" }],
+      [{ chineseText: "傷官", koreanText: "상관" }],
+      [
+        { chineseText: "傷官", koreanText: "상관" },
+        { chineseText: "傷官", koreanText: "상관" },
+        { chineseText: "傷官", koreanText: "상관" },
+      ],
+    ],
+  },
+  {
+    contentLine: [
+      [{ chineseText: "貴人", koreanText: "귀인" }],
+      [
+        {
+          imgURL: "byeong.png",
+        },
+      ],
+      [
+        {
+          imgURL: "byeong.png",
+        },
+      ],
+      [
+        {
+          imgURL: "byeong.png",
+        },
+      ],
+      [
+        {
+          imgURL: "byeong.png",
+        },
+      ],
+    ],
+  },
+  {
+    contentLine: [
+      [{ chineseText: "貴人", koreanText: "귀인" }],
+      [
+        {
+          imgURL: "byeong.png",
+        },
+      ],
+      [
+        {
+          imgURL: "byeong.png",
+        },
+      ],
+      [
+        {
+          imgURL: "byeong.png",
+        },
+      ],
+      [
+        {
+          imgURL: "byeong.png",
+        },
+      ],
+    ],
+  },
+  {
+    contentLine: [
+      [{ chineseText: "貴人", koreanText: "귀인" }],
+      [{ chineseText: "天乙", koreanText: "천을" }],
+      [{ chineseText: "比肩", koreanText: "비견" }],
+      [{ chineseText: "傷官", koreanText: "상관" }],
+      [{ chineseText: "傷官", koreanText: "상관" }],
+    ],
+  },
+  {
+    contentLine: [
+      [{ chineseText: "貴人", koreanText: "귀인" }],
+      [{ chineseText: "天乙", koreanText: "천을" }],
+      [{ chineseText: "比肩", koreanText: "비견" }],
+      [{ chineseText: "傷官", koreanText: "상관" }],
+      [{ chineseText: "傷官", koreanText: "상관" }],
+    ],
+  },
+  {
+    contentLine: [
+      [{ chineseText: "貴人", koreanText: "귀인" }],
+      [{ chineseText: "天乙", koreanText: "천을" }],
+      [{ chineseText: "比肩", koreanText: "비견" }],
+      [{ chineseText: "傷官", koreanText: "상관" }],
+      [{ chineseText: "傷官", koreanText: "상관" }],
+    ],
+  },
+];
 
-type ChartContentType = {
-  contents: ItemsType[][];
-};
-
-interface ChartContentProps {
-  chartContentData: ChartContentType;
-}
-
-function ChartContent({ chartContentData }: ChartContentProps) {
+function ChartContent() {
   return (
-    <div className="grid grid-cols-5 w-full border-b-2 border-black">
-      <div className="border-r-2 border-black flex py-1 flex-col items-center justify-center">
-        <p className="font-zenantique">
-          {chartContentData.contents[0][0].chineseText}
-        </p>
-        <p className="font-gapyeong text-xs">
-          ({chartContentData.contents[0][0].koreanText})
-        </p>
-      </div>
-      {chartContentData.contents.slice(1).map((items, index) => (
-        <div
-          key={index}
-          className="border-r-[1px] last:border-r-2 border-black bg-white flex p-1 flex-col items-center justify-center"
-        >
-          <ChartItem items={items} />
-        </div>
+    <div className="w-full px-5 pb-4">
+      <ChartTitle text1="時" text2="日" text3="月" text4="年" />
+      {chartContentData.map((chartContentData, index) => (
+        <ChartContentLine key={index} chartLineData={chartContentData} />
       ))}
     </div>
   );

@@ -1,11 +1,10 @@
 import Chart from "@/components/Chart";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="max-w-md mx-auto">
       <div className="w-full relative">
-        <Image src="analysis.png" alt="analysis" className="w-full" />
+        <img src="analysis.png" alt="analysis" className="w-full" />
         <div className="flex flex-col w-[58%] h-[5.7%] absolute top-[30.5%] left-[6%] items-center justify-center rounded-[100%] overflow-hidden">
           <p className="font-gapyeong">이제 본격적으로</p>
           <p className="font-gapyeong">OO님의 사주팔자를</p>

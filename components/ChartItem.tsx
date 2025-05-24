@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 interface ItemsType {
@@ -16,7 +15,7 @@ function ChartItem({ items }: ChartItemProps) {
       {items.map((item, index) => (
         <div key={index} className="h-full flex items-center">
           {item.imgURL ? (
-            <Image src={item.imgURL} alt="chartImg" className="h-full" />
+            <img src={`/${item.imgURL}`} alt="chartImg" className="h-full" />
           ) : (
             <div className="py-[2px]">
               <p className="font-zenantique text-lg -mb-1">

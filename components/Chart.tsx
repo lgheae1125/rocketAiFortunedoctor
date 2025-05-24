@@ -1,6 +1,5 @@
 import React from "react";
-import ChartList from "./ChartList";
-import Image from "next/image";
+import ChartContent from "./ChartContent";
 
 interface ChartProps {
   name: string;
@@ -15,19 +14,19 @@ function Chart({ name, birthDay }: ChartProps) {
         <div className="w-[2px] h-full bg-[#2B557E] right-[6px] absolute"></div>
         <div className="w-full h-[2px] bg-[#2B557E] bottom-[6px] absolute"></div>
         <div className="w-[2px] h-full bg-[#2B557E] left-[6px] absolute"></div>
-        <Image
+        <img
           className="absolute left-0 top-10 w-[16%]"
           src="leftCloud.png"
           alt="leftCloud"
         />
-        <Image
+        <img
           className="absolute right-0 top-4 w-[16%]"
           src="rightCloud.png"
           alt="rightCloud"
         />
         <p className="font-gapyeong text-xl mt-8 mb-2">{name}님의 사주</p>
         <p className="font-gapyeong text-2xl font-semibold mb-6">{birthDay}</p>
-        <ChartList />
+        <ChartContent />
       </div>
     </div>
   );
